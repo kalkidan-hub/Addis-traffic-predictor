@@ -4,7 +4,7 @@
 #
 
 app = 'addis-traffic-predictor'
-primary_region = 'ams'
+primary_region = 'cdg'
 
 [build]
 
