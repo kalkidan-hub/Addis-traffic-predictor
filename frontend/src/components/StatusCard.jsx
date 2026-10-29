@@ -16,11 +16,11 @@ export default function StatusCard({ segment, prediction, loading, error }) {
       <div className="segment-title"><div><h2>{segment.name}</h2><p>{segment.area} · {segment.latitude ? `${segment.latitude.toFixed(5)}, ${segment.longitude.toFixed(5)}` : `ID ${segment.id}`}</p></div><div className="segment-index">{Math.round(index * 100)}<small>%</small></div></div>
       <div className="meter"><div className={`meter-fill ${tone}`} style={{ width: `${index * 100}%` }} /></div>
       <div className="metric-grid">
-        <div><span>Predicted speed</span><strong>{loading ? "—" : `${estimatedSpeed} km/h`}</strong></div>
-        <div><span>Speed limit</span><strong>{segment.speedLimit} km/h</strong></div>
-        <div><span>Congestion index</span><strong>{loading ? "Updating" : index.toFixed(2)}</strong></div>
+        <div className="metric-card"><span>Predicted speed</span><strong>{loading ? "—" : `${estimatedSpeed} km/h`}</strong></div>
+        <div className="metric-card"><span>Speed limit</span><strong>{segment.speedLimit} km/h</strong></div>
+        <div className="metric-card"><span>Congestion index</span><strong>{loading ? "Updating" : index.toFixed(2)}</strong></div>
       </div>
-      {error && <p className="error-message">{error}</p>}
+      {error && <div className="error-message" role="alert"><strong>Prediction service unavailable</strong><span>{error}</span></div>}
       {!error && <p className="model-note"><span className="live-dot" /> Model synced to local FastAPI service</p>}
     </section>
   );

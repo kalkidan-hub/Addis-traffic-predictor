@@ -16,7 +16,7 @@ export default function ControlPanel({ hour, dayOfWeek, speedLimit, onHourChange
           <strong>{formatHour(hour)}</strong>
         </div>
         <input id="hour" type="range" min="0" max="23" value={hour} onChange={(event) => onHourChange(Number(event.target.value))} />
-        <div className="range-labels"><span>12 AM</span><span>6 AM</span><span>12 PM</span><span>6 PM</span><span>12 AM</span></div>
+        <div className="range-labels" aria-hidden="true"><span>12 AM</span><span>6 AM</span><span>12 PM</span><span>6 PM</span><span>12 AM</span></div>
       </div>
       <div className="control-grid">
         <div>

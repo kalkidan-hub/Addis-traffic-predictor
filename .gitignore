@@ -1,3 +1,4 @@
 /.pytest_cache
 /.venv
 /addis_traffic_training_data.csv
+/cache

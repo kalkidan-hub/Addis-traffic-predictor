@@ -98,7 +98,7 @@ function App() {
         <div className="brand"><div className="brand-mark"><span /></div><div><h1>Sheger Flow</h1><p>Urban mobility intelligence</p></div></div>
         <div className="topbar-meta">
           <span className="connection-indicator"><i /> LOCAL MODEL ONLINE</span>
-          <span className="date-stamp">ADDIS ABABA · 2025</span>
+          <span className="date-stamp">ADDIS ABABA · 2026</span>
           <button
             className="theme-toggle"
             type="button"
