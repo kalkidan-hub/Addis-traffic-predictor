@@ -2,3 +2,5 @@
 /.venv
 /addis_traffic_training_data.csv
 /cache
+/api/__pycache__
+/api/.pytest_cache
