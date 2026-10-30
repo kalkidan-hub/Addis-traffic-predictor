@@ -79,8 +79,8 @@ function App() {
       } catch (requestError) {
         if (active) {
           const message = requestError.response?.data?.detail || "Unable to reach the prediction service.";
-          const apiPort = new URL(API_BASE_URL).port || "80";
-          setError(`${message} Start FastAPI on port ${apiPort} to see live results.`);
+          const apiUrl = new URL(API_BASE_URL);
+          setError(`${message} Check the prediction service at ${apiUrl.host} and try again.`);
         }
       } finally {
         if (active) setLoading(false);

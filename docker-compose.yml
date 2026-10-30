@@ -18,7 +18,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        VITE_API_URL: /api
+        VITE_API_URL: https://addis-traffic-predictor.fly.dev
     ports:
       - "8080:80"
     depends_on:

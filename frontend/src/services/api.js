@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:8000";
+  import.meta.env.VITE_API_URL || "https://addis-traffic-predictor-thrumming-ridge-2630.fly.dev/";
 
 const api = axios.create({
   baseURL: API_BASE_URL,
